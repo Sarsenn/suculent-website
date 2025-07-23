@@ -1,0 +1,25 @@
+
+// Global
+@import './vars';
+@import './reset';
+@import './global';
+@import './burger';
+
+
+body {
+	background-color: #eff0e6;
+}
+
+
+// Sections
+@import './button';
+@import './header';
+@import './card';
+@import './tabs';
+@import './carry';
+
+
+// @import './footer';
+
+// Libs
+

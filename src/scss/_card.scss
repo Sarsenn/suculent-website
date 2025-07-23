@@ -1,0 +1,119 @@
+.card {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @media (max-width: 768px) {
+    padding-top: 30px;
+  }
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    &-item {
+      width: 49%;
+      position: relative;
+      overflow: hidden;
+      height: 320px;
+      cursor: pointer;
+      background-color: #dddedb;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      display: flex;
+      transition: 1s all;
+      @media (max-width: 1024px) {
+        height: 250px;
+        
+      }
+      @media (max-width: 768px) {
+        height: 185px;
+        border-radius: 30px;
+      }
+
+      @media (max-width: 425px) {
+        height: 135px;
+      }
+      &:hover {
+        background-color: #79bf80;
+      }
+      .descr {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 45px;
+        padding-left: 20px;
+        @media (max-width: 1024px) {
+          gap: 20px;
+        }
+        @media (max-width: 768px) {
+          gap: 20px;
+          padding-left: 5px;
+        }
+        @media (max-width: 425px) {
+          padding-top: 30px;
+        }
+        h2 {
+          font-family: $fontMain;
+          font-weight: 700;
+          color: #1b3e28;
+          font-size: calc(14px + 6 * (100vw / 1920));
+          @media (min-width: 767px) {
+            font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1920));
+          }
+        }
+        p {
+          display: block;
+          font-family: $fontSecondary;
+          font-size: calc(8px + 32 * (100vw / 1920));
+            @media (min-width:1640px) {
+           font-size: calc(32px + (6 + 6 * 0.7) * ((100vw - 320px) /1920));
+			}
+          @media (min-width: 767px) {
+            font-size: calc(8px + (32 + 32 * 0.7) * ((100vw - 320px) / 1920));
+          }
+        }
+        @media (max-width: 767px) {
+          gap: 10px;
+        }
+      }
+
+      a {
+        display: block;
+        font-family: $fontSecondary;
+        text-decoration: underline;
+        color: #c26f4c;
+        font-size: clamp(10px, 2vw, 22px);
+      }
+    }
+
+    .picture {
+      width: 50%;
+      position: relative;
+      img {
+        position: absolute;
+        height: 400px;
+        @media (max-width: 1024px) {
+          height: 300px;
+        }
+
+        @media (max-width: 767px) {
+          height: 185px;
+          width: 145px;
+          bottom: -20px;
+        }
+        @media (max-width: 425px) {
+          height: 115px;
+          width: 75px;
+          right: -20px;
+          bottom: 10px;
+        }
+        @media (max-width: 325px) {
+          right: -30px;
+        }
+      }
+    }
+  }
+}

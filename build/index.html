@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garden</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="png" href="img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="svg+xml" href="img/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Succulents" />
+    <!--  <link rel="manifest" href="img/site.webmanifest" /> -->
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="main__body">
+    <!-- Header -->
+    <header class="header">
+    <div class="container">
+        <nav class="header_nav">
+            <a href="#" class="logo">
+                <img src="../img/logo/logo.png" alt="">
+            </a>
+            <ul class="header_nav-ul">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="#">О Нас</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <div class="header_nav-modal">
+                <a href="#" class="favorite">
+                <img src="../img/logo/heart.svg" alt="heart">
+                </a>
+                <a href="#" class="backet"><img src="../img/logo/bag.svg" alt="bag"></a>
+                <a href="#" class="person"><img src="../img/logo/person.svg" alt="person"></a>
+            </div>
+
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </nav>
+
+        <div class="mobile">
+        </div>
+
+
+
+        <div class="header_subheader">
+            <div class="header_subheader-descr">
+                <h1>Природа ближе, чем ты думаешь</h1>
+                <p>Добавьте зелени в свой интерьер. Растения для дома и кухни — с эффектом уюта и спокойствия.</p>
+                <a class="button">Посмотреть
+                    <span><img src="img/logo/arrow.svg" alt="arrow"></span>
+                </a>
+            </div>
+            <div class="header_subheader-img">
+                <div class="price">
+                    <span>Цена</span>
+                    <span>1750₸</span>
+                </div>
+                <div class="wrapper">
+                    <img src="../img/plant.svg" alt="plant">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="header_footer">
+            <div class="container footer">
+                <div class="header_footer-item">
+                <img src="../img/logo/delivery.svg" alt="delivery">
+                <div class="wrapper">
+                    <h2>Бесплатная доставка</h2>
+                    <p>При заказе от 10000₸, мы доставим ваши растения прямо к двери — быстро, удобно и без лишних затрат.</p>
+                </div>
+                </div>
+            <div class="header_footer-item">
+                <img src="../img/logo/cards.svg" alt="delivery">
+                <div class="wrapper">
+                    <h2>Безопасная оплата</h2>
+                    <p>Оплачивайте заказы безопасно и удобно. Мы используем надёжные платёжные системы, чтобы ваши данные всегда оставались под защитой.</p>
+                </div>
+            </div>
+            <div class="header_footer-item">
+                <img src="../img/logo/like.svg" alt="delivery">
+                <div class="wrapper">
+                    <h2>Забота о клиентах</h2>
+                    <p>Мы ценим каждого покупателя и стремимся сделать ваш опыт покупки максимально приятным — от выбора до получения заказа.</p>
+                </div>
+            </div>
+            </div>
+
+
+        </div>
+
+</header>
+    <!-- card -->
+
+<section class="card">
+	<div class="container">
+		<div class="card_wrapper">
+			<div class="card_wrapper-item">
+				<div class="descr">
+					<h2> Лови суперцены!</h2>
+					<p class="name">Пеперомия</p>
+					<a href="#">К каталогу</a>
+				</div>
+
+				<div class="picture">
+				<img src="../img/plant1.webp" alt="plant">					
+				</div>
+			</div>
+			<div class="card_wrapper-item">
+				<div class="descr">
+					<h2>Хит продаж!</h2>
+					<p class="name">Портулакария африканская</p>
+					<a href="#">К каталогу</a>
+				</div>
+				<div class="picture">
+				<img src="../img/plant2.webp" alt="plant">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+    <section class="tabs">
+	<div class="container">
+		<div class="tabs_head">
+			<h2>Наша продукция</h2>
+			<div class="divider"></div>
+		</div>
+		<div class="tabs_content">
+			<div class="tabs_wrapper" data-navigation>
+				<button type="button" class="btn btn-primary greenactive" data-tab="first" >Новиники</button>
+				<button type="button" class="btn btn-primary "  data-tab="second" >Лучший в продаже</button>
+				<button type="button" class="btn btn-primary " data-tab="mega" >Выбор покупателя</button>
+			</div>
+			<ul class="tabs_items" data-main-content>
+				<li class="tabs_items-item item-active" data-content="first">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/suc1.webp" alt="suc">
+											</div>
+											<h2 id="hi">Эхеверия</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul3.webp" alt="suc">
+											</div>
+											<h2>Граптопеталуму</h2>
+											<span class="sub-price">5000₸</span>
+										</div>
+								</div>
+
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul4.webp" alt="suc">
+											</div>
+											<h2>Маммиллярия </h2>
+											<span class="sub-price">1000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+							<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/suc1.webp" alt="suc">
+											</div>
+											<h2 id="hi">Эхеверия</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul3.webp" alt="suc">
+											</div>
+											<h2>Граптопеталуму</h2>
+											<span class="sub-price">5000₸</span>
+										</div>
+								</div>
+
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul4.webp" alt="suc">
+											</div>
+											<h2>Маммиллярия </h2>
+											<span class="sub-price">1000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>															
+						</div>
+
+							<div class="swiper-pagination"></div>
+						  <div class="swiper-button-prev"> <img src="img/logo/left.svg" alt="left"></div>
+  						  <div class="swiper-button-next"><img src="img/logo/right.svg" alt="right"></div>
+						    <div class="swiper-scrollbar"></div>
+
+					</div>
+				</li>
+				<li class="tabs_items-item" data-content="second">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/suc1.webp" alt="suc">
+											</div>
+											<h2 id="hi">Эхеверия</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul3.webp" alt="suc">
+											</div>
+											<h2>Граптопеталуму</h2>
+											<span class="sub-price">5000₸</span>
+										</div>
+								</div>
+
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul4.webp" alt="suc">
+											</div>
+											<h2>Маммиллярия </h2>
+											<span class="sub-price">1000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+							<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/suc1.webp" alt="suc">
+											</div>
+											<h2 id="hi">Эхеверия</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul3.webp" alt="suc">
+											</div>
+											<h2>Граптопеталуму</h2>
+											<span class="sub-price">5000₸</span>
+										</div>
+								</div>
+
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul4.webp" alt="suc">
+											</div>
+											<h2>Маммиллярия </h2>
+											<span class="sub-price">1000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>															
+						</div>
+
+							<div class="swiper-pagination"></div>
+						  <div class="swiper-button-prev"> <img src="img/logo/left.svg" alt="left"></div>
+  						  <div class="swiper-button-next"><img src="img/logo/right.svg" alt="right"></div>
+						    <div class="swiper-scrollbar"></div>
+
+					</div>
+				</li>
+				<li class="tabs_items-item" data-content="mega">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/suc1.webp" alt="suc">
+											</div>
+											<h2 id="hi">Эхеверия</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul3.webp" alt="suc">
+											</div>
+											<h2>Граптопеталуму</h2>
+											<span class="sub-price">5000₸</span>
+										</div>
+								</div>
+
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul4.webp" alt="suc">
+											</div>
+											<h2>Маммиллярия </h2>
+											<span class="sub-price">1000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+							<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/suc1.webp" alt="suc">
+											</div>
+											<h2 id="hi">Эхеверия</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul3.webp" alt="suc">
+											</div>
+											<h2>Граптопеталуму</h2>
+											<span class="sub-price">5000₸</span>
+										</div>
+								</div>
+
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul4.webp" alt="suc">
+											</div>
+											<h2>Маммиллярия </h2>
+											<span class="sub-price">1000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>
+								<div class="swiper-slide">
+										<div class="goods">
+											<div class="img">
+												<img src="../img/sucul2.webp" alt="suc">
+											</div>
+											<h2>Литопс</h2>
+											<span class="sub-price">2000₸</span>
+										</div>
+								</div>															
+						</div>
+
+							<div class="swiper-pagination"></div>
+						  <div class="swiper-button-prev"> <img src="img/logo/left.svg" alt="left"></div>
+  						  <div class="swiper-button-next"><img src="img/logo/right.svg" alt="right"></div>
+						    <div class="swiper-scrollbar"></div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</section>
+    <section class="carry">
+	<div class="container">
+		<div class="carry_wrapper">
+			<div class="head">
+				<h2>Растения для здоровой и счастливой жизни</h2>
+			</div>
+				<div class="carry_footage">
+			<div class="first">
+					<video autoplay muted loop playsinline>
+					    <source src="img/first.mp4"  style="transition: all 0.3s ease;" type="video/mp4">
+    					<source src="img/first.webm"  style="transition: all 0.3s ease;" type="video/webm">
+					</video>
+			</div>
+
+				<div class="second">
+					<video autoplay muted loop playsinline>
+					    <source src="img/second.mp4"  style="transition: all 0.3s ease;" type="video/mp4">
+    					<source src="img/second.webm"  style="transition: all 0.3s ease;" type="video/webm">
+					</video>
+				</div>
+		</div>
+			<div class="carry_descr">
+				<p>Мы выращиваем растения и вносим вклад в создание более здоровой окружающей среды.</p>
+				<a class="button">
+					Узнать больше
+					<span><img src="img/logo/arrow.svg" alt="arrow"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+</section>
+    
+    <!-- Main Page -->
+    <main></main>
+    <!-- Footer -->
+    
+
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="js/scripts.min.js"></script>
+</html>
