@@ -14,10 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		  goods = document.querySelectorAll('.goods');
 
 
-
-
-
-
 function movingContent () {
 			if(window.innerWidth <= 768) {
 					mobile.appendChild(ul);
@@ -33,7 +29,8 @@ function movingContent () {
 					bag.src = 'img/logo/bag.svg';
 				}
 }
-movingContent()
+
+movingContent();
 
 		window.addEventListener('resize', () => {
 			movingContent();
@@ -164,7 +161,6 @@ function changeNavigation (event) {
 	console.log(target);
 }
 //slider 
-
 
 });
 

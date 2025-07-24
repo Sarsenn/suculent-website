@@ -1,0 +1,43 @@
+.follow {
+	padding-bottom: 50px;
+	padding-top: 50px;
+	background-color: #dddedb;
+
+	&_wrapper {
+		display: flex;
+		margin-top: 50px;
+		gap: 20px;
+		justify-content: center;
+		@media (max-width: 1024px) {
+			display: grid;
+			gap: 20px;
+            grid-template-columns: repeat(2, 34vw);
+			grid-template-rows: repeat(2, 27vw);
+          }
+		@media (max-width: 768px) {
+			margin-top: 20px;
+            grid-template-columns: repeat(2, 36vw);
+			grid-template-rows: repeat(2, 28vw);
+          }
+
+		.items {
+			cursor: pointer;
+			width: clamp(100px, 34vw, 330px);
+			height: clamp(100px, 27vw, 230px);
+			border-radius: 30px;
+			overflow: hidden;
+			img {
+				transition: 1s all;
+			&:hover {
+				transform: scale(1.1);
+			}
+			}
+
+			@media (max-width: 768px) {
+            border-radius: 20px;
+          }
+
+			
+		}
+	}
+}
