@@ -4,11 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Suculent-garden</title>
+    <meta name="title" content="Suculent-garden" />
+    <meta name="description" content="Лучшие суккуленты и растения для дома и офиса. Большой выбор, быстрая доставка и советы по уходу. Преобразите пространство с зеленью!" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarsenn.github.io/" />
+    <meta property="og:title" content="Suculent-garden" />
+    <meta property="og:description" content="Лучшие суккуленты и растения для дома и офиса. Большой выбор, быстрая доставка и советы по уходу. Преобразите пространство с зеленью!" />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- X (Twitter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sarsenn.github.io/" />
+    <meta property="twitter:title" content="Suculent-garden" />
+    <meta property="twitter:description" content="Лучшие суккуленты и растения для дома и офиса. Большой выбор, быстрая доставка и советы по уходу. Преобразите пространство с зеленью!" />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
     <title>Garden</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,21 +50,24 @@
   </head>
 
   <body class="main__body">
-    <!-- Header -->
-    @@include('./html/_header.html')
-    @@include('./html/_card.html')
-    @@include('./html/_tabs.html')
-    @@include('./html/_carry.html')
-    @@include('./html/_info.html')
-     @@include('./html/_follow.html')
-    <!--     @@include('./html/_review.html') -->
-    <!-- Main Page -->
-    <main></main>
-    <!-- Footer -->
-    @@include('./html/_footer.html')
+    <div id="smooth-wrapper"> 
+      <div id="smooth-content">
+            @@include('./html/_header.html')
+            @@include('./html/_card.html')
+            @@include('./html/_tabs.html')
+            @@include('./html/_carry.html')
+            @@include('./html/_info.html')
+            @@include('./html/_follow.html')
+              @@include('./html/_footer.html')
+      </div>
+    </div>
 
 
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="js/scripts.min.js"></script>
 </html>

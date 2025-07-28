@@ -17,8 +17,11 @@
 		margin-top: 30px;
 		gap: 10px;
 		justify-content: space-between;
+		@media (max-width:425px) {
+				margin-top: 10px;
+			}
 		.btn-primary{
-			font-size: clamp(0.5rem,  1.3vw, 1.6rem);
+			font-size: clamp(0.8rem,  1.3vw, 1.6rem);
 			padding: 4px;
 			height: 60px;
 			width: 280px;
@@ -49,13 +52,13 @@
 	.swiper {
 		margin-top: 30px;
 		padding-bottom: 50px;
-			
+		@media (max-width:425px) {
+				margin-top: 10px;
+				}
 			&-slide {
 				margin-top: 0;
-				place-items:center;
-					@media (max-width:768px) {
+				//place-items:center;
 
-					}
 					
 				.goods {
 					width: clamp(135px, 26vw, 380px);
@@ -89,6 +92,7 @@
 						font-size: clamp(1rem, 1.7vw, 2.5rem);
 						margin-top: 15px;
 						margin-left: 30px;
+						text-align: left;
 						@media (max-width:768px) {
 							margin-left: 0;
 					}

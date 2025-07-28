@@ -2,6 +2,13 @@
 	padding-bottom: 50px;
 	padding-top: 50px;
 	background-color: #dddedb;
+	h2 {
+		color: #0c3523;
+	}
+
+	@media (max-width: 425px) {
+            padding: 20px 0;
+          } 
 
 	&_wrapper {
 		display: flex;
