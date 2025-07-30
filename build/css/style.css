@@ -110,11 +110,12 @@ img {
 
 .hamburger {
   padding: 15px 15px;
-  display: inline-block;
-  position: fixed;
+  display: none;
+  position: absolute;
   right: 0;
+  top: 25px;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 3020;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
   -o-transition-property: opacity, filter;
@@ -247,6 +248,7 @@ img {
 
 .hamburger--collapse.is-active .hamburger-inner::before {
   top: 0;
+  z-index: 3000;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -262,6 +264,85 @@ body {
   margin: 0;
   padding: 0;
   background-color: #eff0e6;
+}
+
+.scrolled {
+  border-bottom: 0.5px solid rgba(9, 29, 20, 0.75) !important;
+  background: rgba(12, 53, 35, 0.75) !important;
+}
+
+.scrolled .header_nav .logo {
+  width: 80px;
+  height: 80px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header_nav > .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  -webkit-clip-path: circle(0% at 100% 0%);
+          clip-path: circle(0% at 100% 0%);
+  /* из угла */
+  pointer-events: none;
+  background: rgba(12, 53, 35, 0.75);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  -webkit-transition: right 0.5s ease;
+  -o-transition: right 0.5s ease;
+  transition: right 0.5s ease;
+}
+
+.mobile .header_nav-ul {
+  margin-top: 10px;
+}
+
+.mobile .header_nav-modal {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.mobile .header_nav-modal a {
+  width: 30px;
+  height: 30px;
+}
+
+.mobile .logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 h2 {
@@ -311,20 +392,19 @@ h2 {
 }
 
 .header_nav {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  width: 100%;
+  z-index: 500;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header_nav .logo {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
 }
 
 .header_nav-ul {
@@ -361,59 +441,6 @@ h2 {
   display: none;
 }
 
-.header .mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: fixed;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
-  position: fixed;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  -webkit-clip-path: circle(0% at 100% 0%);
-          clip-path: circle(0% at 100% 0%);
-  /* из угла */
-  pointer-events: none;
-  background: rgba(12, 53, 35, 0.75);
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  -webkit-transition: right 0.5s ease;
-  -o-transition: right 0.5s ease;
-  transition: right 0.5s ease;
-}
-
-.header .mobile .header_nav-ul {
-  margin-top: 10px;
-}
-
-.header .mobile .header_nav-modal {
-  width: 150px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
-
-.header .mobile .header_nav-modal a {
-  width: 30px;
-  height: 30px;
-}
-
-.header .mobile .logo {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
 .header .active {
   pointer-events: auto;
 }
@@ -425,6 +452,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 140px;
   gap: 20px;
 }
 
@@ -1184,6 +1212,11 @@ h2 {
   margin-bottom: 20px;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+}
+
 @media (min-width: 767px) {
   .card_wrapper-item .descr h2 {
     font-size: calc(14px + 10.2 * (100vw - 320px) / 1920);
@@ -1258,24 +1291,15 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .header_nav .logo {
-    width: 70px;
-    height: 70px;
-  }
-
-  .header_nav-modal {
-    gap: 30px;
-  }
-
-  .header .hamburger {
+  .hamburger {
     display: inline-block;
   }
 
-  .header .mobile {
+  .mobile {
     width: 40%;
   }
 
-  .header .mobile .header_nav-ul {
+  .mobile .header_nav-ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1288,7 +1312,7 @@ h2 {
     transition: 1s all;
   }
 
-  .header .mobile .header_nav-ul a {
+  .mobile .header_nav-ul a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1307,6 +1331,23 @@ h2 {
     padding: 10px;
     background-color: #c26f4c;
     border-radius: 20px;
+  }
+
+  .header_nav .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header_nav-modal {
+    gap: 30px;
+  }
+
+  .header .hamburger {
+    display: inline-block;
+  }
+
+  .header_subheader {
+    padding-top: 80px;
   }
 
   .header_footer-item {
@@ -1465,6 +1506,12 @@ h2 {
   .footer_wrapper-page li:nth-child(1) {
     display: none;
   }
+
+  a,
+  button {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1557,15 +1604,15 @@ h2 {
 }
 
 @media (max-width: 425px) {
+  .mobile {
+    width: 100%;
+  }
+
   .header .hamburger .hamburger-inner,
   .header .hamburger .hamburger-inner::before,
   .header .hamburger .hamburger-inner::after {
     width: 30px;
     height: 3px;
-  }
-
-  .header .mobile {
-    width: 100%;
   }
 
   .header_subheader-descr {

@@ -50,7 +50,41 @@
   </head>
 
   <body class="main__body">
-    <div id="smooth-wrapper"> 
+    <div id="smooth-wrapper">
+
+
+        <nav class="header_nav">
+            <div class="container navbar">
+                <a href="#" class="logo">
+                <img src="img/logo/logo.png" alt="">
+            </a>
+            <ul class="header_nav-ul">
+                <li><a href="#" class="split-text">Главная</a></li>
+                <li><a href="#" class="split-text">Магазин</a></li>
+                <li><a href="#" class="split-text">О Нас</a></li>
+                <li><a href="#" class="split-text">Блог</a></li>
+                <li><a href="#" class="split-text">Контакты</a></li>
+            </ul>
+            <div class="header_nav-modal">
+                <a href="#" class="favorite">
+                <img src="img/logo/heart.svg" alt="heart">
+                </a>
+                <a href="#" class="backet"><img src="img/logo/bag.svg" alt="bag"></a>
+                <a href="#" class="person"><img src="img/logo/person.svg" alt="person"></a>
+            </div>
+
+
+            </div>
+        </nav>
+              <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+          <div class="mobile">
+            <ul class="mobNav"></ul>
+            <div class="icons"></div>
+        </div>
       <div id="smooth-content">
             @@include('./html/_header.html')
             @@include('./html/_card.html')

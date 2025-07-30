@@ -1,10 +1,11 @@
 .hamburger {
   padding: 15px 15px;
-  display: inline-block;
-  position: fixed;
+  display: none;
+  position: absolute;
   right: 0;
+  top: 25px;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 3020;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;
@@ -14,7 +15,11 @@
   background-color: transparent;
   border: 0;
   margin: 0;
-  overflow: visible; }
+  overflow: visible; 
+  @media (max-width:768px) {
+    display: inline-block;
+  }
+}
   .hamburger:hover {
     opacity: 0.7; }
   .hamburger.is-active:hover {
@@ -76,5 +81,6 @@
     transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear; }
   .hamburger--collapse.is-active .hamburger-inner::before {
     top: 0;
+    z-index: 3000;
     transform: rotate(-90deg);
     transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }

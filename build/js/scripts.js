@@ -6,14 +6,88 @@ document.addEventListener("DOMContentLoaded", () => {
   const debouceMovingContent = debounce(movingContent, 5);
   debouceMovingContent();
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+  let lastScroll = 0;
+  let navbar = document.querySelector(".header_nav");
+  let logo = document.querySelector('.logo');
+
 //smoother scroll
   let smooth = ScrollSmoother.create({
     wrapper: "#smooth-wrapper",
     content: "#smooth-content",
-    smooth: 1.6,
+    smooth: 1.1,
     smoothTouch: 0.1,
     effects: true,
   });
+
+
+
+function getLogoSize(scroled) {
+  const isMobile = window.innerWidth <= 768;
+
+  if(scroled) {
+    return isMobile ? {width: "70px", height: '70px'}: {width: '120px', height: '120px'}
+  }else {
+    return isMobile ? {width: "70px", height: '70px'}: {width: '150px', height: '150px'}
+  }
+}
+
+let isScrolled = false;
+
+
+const size = getLogoSize(isScrolled);
+
+ScrollTrigger.create({
+  start: "top top",
+  end: "bottom bottom",
+  onUpdate: () => {
+    const scrollY = smooth.scrollTop();
+
+    if (scrollY > 50 && !isScrolled) {
+      isScrolled = true;
+      navbar.classList.add("scrolled");
+
+      gsap.to(navbar, {
+        paddingTop: "10px",
+        paddingBottom: "10px",
+        borderBottomColor: "rgba(0,0,0,0.1)",
+        boxShadow: "0 4px 10px rgba(0,0,0,0.05)",
+        duration: 0.3,
+        ease: "power2.out",
+      });
+
+      gsap.to(logo, {
+        width: "80px",
+        height: '80px',
+        duration: 0.3,
+        ease: "power2.out",
+      });
+
+    } else if (scrollY <= 50 && isScrolled) {
+      isScrolled = false;
+      navbar.classList.remove("scrolled");
+       const size = getLogoSize(false);
+      gsap.to(navbar, {
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        borderBottomColor: "transparent",
+        boxShadow: "0 0 0 rgba(0,0,0,0)",
+        duration: 0.3,
+        ease: "power2.out",
+      });
+
+      gsap.to(logo, {
+        width: size.width,
+        height: size.height,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    }
+  }
+});
+
+
+
 
 
 //fade in section 
@@ -96,6 +170,7 @@ if(!fadeUpDesctop) {
 
   const mobile = document.querySelector(".mobile");
   const headerNav = document.querySelector(".header_nav");
+  const navCont = document.querySelector('.navbar') ;
   const nav = document.querySelector(".header_nav-ul");
   const modal = document.querySelector(".header_nav-modal");
   const desctBtn = document.querySelector(".carry_descr .button");
@@ -129,18 +204,29 @@ if(!fadeUpDesctop) {
         goodsLeft();
         head.appendChild(desctBtn);
         isMobile = true;
+
+    const size = getLogoSize(isScrolled);
+    gsap.to(logo, {
+      width: size.width,
+      height: size.height,
+      duration: 0.3,
+      ease: "power2.out",
+    });
       }
     } else {
       if (isMobile) {
         mobile.innerHTML = "";
-        headerNav.appendChild(nav);
-        headerNav.appendChild(modal);
+        navCont.appendChild(nav);
+        navCont.appendChild(modal);
         goodsLeft();
         carry.appendChild(desctBtn);
         isMobile = false;
       }
     }
   }
+   
+  
+
 
   function goodsLeft() {
     goods.forEach((item, index) => {
