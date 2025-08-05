@@ -72,9 +72,11 @@
 		display: flex;
 		justify-content: space-between;
 		padding-top: 140px;
-		gap: 20px;
 		@media (max-width:768px) {
 			padding-top: 80px;	
+			}
+		@media (max-width:525px) {
+			gap: 0;
 			}
 
 		&-descr {
@@ -82,17 +84,20 @@
 			width: 50vw;
 			@media (max-width: 425px) {
 				margin-top: 10px;
+				    display: flex;
+					flex-direction: column;
+					justify-content: end;
 			}
 			h1 {
 				font-family: $fontMain;
-				font-size: clamp(1rem, 5vw, 4.5rem);
+				font-size: clamp(1rem, 6vw, 2.8rem);
 				font-weight: 700;
 			}
 			p {
 				margin-top: 25px;
 				font-family: $fontSecondary;
 				font-weight: 100;
-				font-size: clamp(0.1rem, 2.5vw, 1.5rem); /* адаптивно: 16–24px */
+				font-size: clamp(0.1rem, 3.0vw, 1.2rem); /* адаптивно: 16–24px */
 				line-height: 1.6;
 			@media (max-width: 425px) {
 				margin-top: 10px;
@@ -100,13 +105,19 @@
 			}
 			.button {
 				margin-top: 20px;
+				font-size: clamp(.1rem, 3vw, 1.3rem);
 			@media (max-width: 425px) {
 				margin-top: 10px;
+				padding:  0 5px;
+				span {
+					width: clamp(3px, 5vw, 30px);
+
+				}
 				}
 			}
 		}
 		&-img {
-			width: 50vw;
+			width: 65vw;
 			position: relative;
 			display: flex;
 			justify-content: right;
@@ -120,7 +131,7 @@
 /* 				width: 500px;
 				height: 600px; */
 				width: clamp(100px, 50vw, 90%);
-				aspect-ratio: 5 / 6; 
+				aspect-ratio: 4 / 3; 
 				border-top-left-radius: 500px;
 				border-top-right-radius: 500px;
 				background-color: #eff0e6;
@@ -133,7 +144,7 @@
 					position: absolute;
 /* 					width: 300px;
 					height: 700px; */
-					  width: clamp(80px, 70%, 80%);
+					  width: clamp(80px, 90%, 70%);
 					bottom: -60px;
 					left: 50%;
 					transform: translateX(-50%) scale(0.9);
@@ -238,6 +249,7 @@
 					font-weight: 600;
 				}
 				p {
+					text-align: center;
 					margin-top: 10px;
 					font-family: $fontSecondary;
 					font-size: clamp(8px, 1vw, 10px);

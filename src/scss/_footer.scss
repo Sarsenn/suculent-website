@@ -31,7 +31,7 @@
 				}
 			p {
 				font-family: $fontSecondary;
-				font-weight: 300;
+				font-weight: 200;
 				@media (max-width:425px) {
 					font-size: 0.6rem;
 				}		
@@ -44,7 +44,7 @@
 				}		
 				a {
 				font-family: $fontSecondary;
-				font-weight: 300;
+				font-weight: 200;
 				color: #fff;
 				cursor: pointer;					
 					@media (max-width:425px) {
@@ -64,7 +64,7 @@
 				}
 			h3 {
 				text-align: center;
-				font-family: $fontSecondary;
+				font-family: $fontMain;
 				font-weight: 600;
 				font-size: calc(24px + 6 * (100vw / 1920));
 				@media (max-width: 768px) {
@@ -80,7 +80,7 @@
 				text-align: center;
 				margin-top: 30px;
 				font-family: $fontSecondary;
-				font-weight: 300;
+				font-weight: 200;
 				width: 	clamp(200px, 45vw, 630px);
 				font-size: calc(14px + 6 * (100vw / 1920));
 				@media (max-width: 768px) {
@@ -140,7 +140,7 @@
 			li {
 				font-family: $fontSecondary;
 				margin-top: 10px;
-				font-weight: 300;
+				font-weight: 200;
 				&:nth-child(1) {
 					font-weight: 600;
 					margin-bottom: 20px;

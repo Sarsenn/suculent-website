@@ -1,6 +1,6 @@
 .card {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   @media (max-width: 768px) {
     padding-top: 30px;
   }
@@ -87,7 +87,7 @@
       a {
         display: block;
         font-family: $fontSecondary;
-        text-decoration: underline;
+        //text-decoration: underline;
         color: #c26f4c;
         font-size: clamp(10px, 2vw, 22px);
       }

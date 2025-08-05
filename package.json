@@ -15,6 +15,9 @@
     "motion": "^12.23.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "babel-loader": "^10.0.0",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp-autoprefixer": "^8.0.0",
@@ -25,6 +28,9 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify-es": "^3.0.0",
-    "sass": "^1.43.5"
+    "sass": "^1.43.5",
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-stream": "^7.0.0"
   }
 }

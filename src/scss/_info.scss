@@ -100,7 +100,7 @@
 				font-family: $fontSecondary;
 				font-weight: 200;
 				color: #000;
-				font-size: calc(10px + 6 * (100vw / 1920));
+				font-size: calc(14px + 6 * (100vw / 1920));
 				@media (max-width: 767px) {
             		font-size: calc(10px + (16 + 16 * 0.7) * ((100vw - 320px) / 1920));
 					margin-top: 15px;
@@ -173,7 +173,7 @@
 					font-family: $fontSecondary;
 					color: #000;
 					font-weight: 200;
-					font-size: calc(7px + 6 * (100vw / 1920));
+					font-size: calc(14px + 6 * (100vw / 1920));
 					@media (max-width: 768px) {
 					margin-top: 10px;
           		} 
