@@ -2,52 +2,6 @@
 	position: relative;
 	background: linear-gradient(201deg,rgba(18, 97, 58, 1) 20%, rgba(20, 48, 33, 1) 71%, rgba(19, 64, 38, 1) 87%, rgba(17, 62, 37, 1) 100%);
 	color: #fff;
-	&_nav {
-		position: fixed;
-		top: 0;
-		background-color: transparent;
-		width: 100%;
-		z-index: 500;
-		transition: all 0.3s ease;
-		@media (max-width:768px) {
-				
-			}
-		.logo {
-			width: 140px;
-			height: 140px;
-			@media (max-width:768px) {
-				width: 70px;
-				height: 70px;
-			}
-		}
-
-		&-ul {
-			display: flex;
-			font-weight: 300;
-			font-size: clamp(16px, 2vw, 20px);
-			gap: 30px;
-			li {
-				cursor: pointer;
-				a {
-					font-family: $fontSecondary; 
-					color: #fff;
-
-				}
-			}
-		}
-
-		&-modal {
-			display: flex;
-			gap: 10px;
-			a {
-				width:30px;
-				height:30px;
-			}
-			@media (max-width: 768px) {
-				gap: 30px;
-			}
-		}
-	}
 
 
 	.hamburger {
