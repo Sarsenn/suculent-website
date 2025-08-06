@@ -209,7 +209,6 @@ body {
   position: fixed;
   padding-top: 25px;
   left: 50%;
-  /* ставим середину блока на центр окна */
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -396,6 +395,94 @@ h2 {
   text-align: center;
 }
 
+.benefits {
+  padding-top: 20px;
+}
+
+.benefits_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #dddedb;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.benefits_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #feffef;
+  -webkit-box-shadow: 1px solid #000;
+          box-shadow: 1px solid #000;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.benefits_item:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.benefits_item video {
+  width: 320px;
+  height: 180px;
+}
+
+.benefits_item .descr {
+  position: absolute;
+  padding: 10px;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.benefits_item .descr h3 {
+  font-family: "Noto Serif Display", serif;
+  text-align: center;
+  font-weight: 700;
+  color: #fefff0;
+  font-size: 1.9rem;
+}
+
+.benefits_item .descr p {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  color: #fefff0;
+  font-size: 0.9rem;
+}
+
 .button {
   font-family: "Inter", sans-serif;
   display: -webkit-box;
@@ -430,8 +517,27 @@ h2 {
 
 .header {
   position: relative;
-  background: linear-gradient(201deg, #12613a 20%, #143021 71%, #134026 87%, #113e25 100%);
+  background: url("../img/mainbg.webp") center center/cover no-repeat;
   color: #fff;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 .header .hamburger {
@@ -446,28 +552,47 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 3;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 140px;
+  padding-top: 160px;
 }
 
 .header_subheader-descr {
-  margin-top: 100px;
-  width: 50vw;
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .header_subheader-descr h1 {
+  position: relative;
+  display: inline-block;
   font-family: "Noto Serif Display", serif;
-  font-size: clamp(1rem, 6vw, 2.8rem);
+  display: inline-block;
+  font-size: clamp(1rem, 6vw, 3rem);
   font-weight: 700;
 }
 
 .header_subheader-descr p {
+  position: relative;
+  display: inline-block;
   margin-top: 25px;
   font-family: "Inter", sans-serif;
   font-weight: 100;
-  font-size: clamp(0.1rem, 3vw, 1.2rem);
+  font-size: clamp(0.1rem, 3vw, 1.5rem);
   /* адаптивно: 16–24px */
   line-height: 1.6;
 }
@@ -475,6 +600,9 @@ h2 {
 .header_subheader-descr .button {
   margin-top: 20px;
   font-size: clamp(0.1rem, 3vw, 1.3rem);
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 .header_subheader-img {
@@ -561,66 +689,8 @@ h2 {
   font-weight: 700;
 }
 
-.header_footer {
-  height: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #0c3523;
-}
-
-.header_footer .footer-wrap {
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header_footer-item {
-  border-right: 1px solid #fff;
-  padding: 0 30px;
-  width: 33%;
-  height: clamp(60px, 1vw, 130px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  gap: 30px;
-}
-
-.header_footer-item:nth-child(3) {
-  border-right: none;
-}
-
-.header_footer-item img {
-  width: clamp(40px, 8vw, 80px);
-  height: clamp(40px, 8vw, 80px);
-}
-
-.header_footer-item .wrapper h2 {
-  font-family: "Noto Serif Display", serif;
-  font-size: clamp(8px, 2vw, 24px);
-  font-weight: 600;
-}
-
-.header_footer-item .wrapper p {
-  text-align: center;
-  margin-top: 10px;
-  font-family: "Inter", sans-serif;
-  font-size: clamp(8px, 1vw, 10px);
-  font-weight: 200;
-}
-
 .card {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 
@@ -1225,6 +1295,19 @@ h2 {
   }
 }
 
+@media (min-width: 1200px) {
+  .benefits_item video {
+    width: 370px;
+    height: 210px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .big {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 1500px) {
   .fixed_nav-modal .button {
     font-size: calc(5px + 0.3873239437vw);
@@ -1303,6 +1386,24 @@ h2 {
     gap: 20px;
   }
 
+  .benefits_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .benefits_wrap {
+    width: 100%;
+  }
+
+  .benefits_item {
+    width: clamp(320px, 30vw, 370px);
+    margin: 0 auto;
+  }
+
   .card_wrapper-item {
     height: 250px;
   }
@@ -1330,31 +1431,30 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  .benefits_item .descr p {
+    font-size: calc(9px + 0.5729166667vw);
+  }
+
   .header .hamburger {
     display: inline-block;
   }
 
   .header_subheader {
-    padding-top: 80px;
+    padding-top: 110px;
   }
 
-  .header_footer-item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    padding: 0;
-    gap: 10px;
+  .header_subheader-descr {
+    width: auto;
   }
 
-  .header_footer-item .wrapper p {
-    display: none;
+  .header_subheader-descr h1 {
+    font-size: 2.7rem;
+  }
+
+  .header_subheader-descr .button {
+    width: 150px;
+    font-size: 1rem;
+    gap: 2px;
   }
 
   .card {
@@ -1591,6 +1691,10 @@ h2 {
   .fixed_nav-modal .button {
     display: none;
   }
+
+  .header_subheader {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 525px) {
@@ -1615,6 +1719,19 @@ h2 {
     height: 30px;
   }
 
+  .benefits_item {
+    width: auto;
+  }
+
+  .benefits_item video {
+    width: 250px;
+    height: 140px;
+  }
+
+  .benefits_item .descr h3 {
+    font-size: calc(17px + 0.5729166667vw);
+  }
+
   .header .hamburger .hamburger-inner,
   .header .hamburger .hamburger-inner::before,
   .header .hamburger .hamburger-inner::after {
@@ -1636,8 +1753,14 @@ h2 {
             justify-content: end;
   }
 
+  .header_subheader-descr h1 {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
   .header_subheader-descr p {
     margin-top: 10px;
+    font-size: 0.7rem;
   }
 
   .header_subheader-descr .button {
@@ -1678,15 +1801,6 @@ h2 {
 
   .header_subheader-img .price span:nth-child(2) {
     font-size: 12px;
-  }
-
-  .header_footer {
-    padding: 0;
-    height: 100px;
-  }
-
-  .header_footer-item {
-    margin-top: 20px;
   }
 
   .card_wrapper-item {

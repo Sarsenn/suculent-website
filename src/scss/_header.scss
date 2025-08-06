@@ -1,7 +1,20 @@
 .header {
 	position: relative;
-	background: linear-gradient(201deg,rgba(18, 97, 58, 1) 20%, rgba(20, 48, 33, 1) 71%, rgba(19, 64, 38, 1) 87%, rgba(17, 62, 37, 1) 100%);
+	background: url('../img/mainbg.webp') center center/cover no-repeat;
 	color: #fff;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	&:before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0,0,0,0.4);
+		z-index: 2;
+	}
+
+
 
 
 	.hamburger {
@@ -24,43 +37,76 @@
 
 	&_subheader	{
 		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: space-around;
+		z-index: 3;
 		justify-content: space-between;
-		padding-top: 140px;
+		padding-top: 160px;
 		@media (max-width:768px) {
-			padding-top: 80px;	
+			padding-top: 110px;	
 			}
+		@media (max-width: 650px) {
+			padding-top: 0;
+		}
 		@media (max-width:525px) {
 			gap: 0;
 			}
 
+
 		&-descr {
-			margin-top: 100px;
-			width: 50vw;
+			width: 60vw;
+			//padding-bottom: 50px;
+			display: flex;
+			flex-direction: column;
+			@media (max-width:768px) {
+			width: auto;
+			}
+
 			@media (max-width: 425px) {
 				margin-top: 10px;
 				    display: flex;
 					flex-direction: column;
 					justify-content: end;
 			}
+					
 			h1 {
+				position: relative;
+				display: inline-block;
 				font-family: $fontMain;
-				font-size: clamp(1rem, 6vw, 2.8rem);
+				display: inline-block;
+				font-size: clamp(1rem, 6vw, 3rem);
 				font-weight: 700;
+			@media (max-width:768px) {
+				font-size: 2.7rem;
 			}
+			@media (max-width:425px) {
+				font-weight: 600;
+				font-size: 2rem;
+			}
+			}
+
 			p {
+				position: relative;
+				display: inline-block;
 				margin-top: 25px;
 				font-family: $fontSecondary;
 				font-weight: 100;
-				font-size: clamp(0.1rem, 3.0vw, 1.2rem); /* адаптивно: 16–24px */
+				font-size: clamp(0.1rem, 3.0vw, 1.5rem); /* адаптивно: 16–24px */
 				line-height: 1.6;
 			@media (max-width: 425px) {
 				margin-top: 10px;
+				font-size: 0.7rem;
 				}
 			}
 			.button {
 				margin-top: 20px;
 				font-size: clamp(.1rem, 3vw, 1.3rem);
-			@media (max-width: 425px) {
+				background-color: transparent;
+				border: 1px solid #fff;
+				color: #fff;
+
+				@media (max-width: 425px) {
 				margin-top: 10px;
 				padding:  0 5px;
 				span {
@@ -68,6 +114,12 @@
 
 				}
 				}
+				
+			@media (max-width:768px) {
+				width: 150px;
+				font-size: 1rem;
+				gap: 2px;
+			}
 			}
 		}
 		&-img {
@@ -152,69 +204,6 @@
 		}
 	}
 
-	&_footer {
-		height: 150px;
-		display: flex;
-		align-items:center;
-		//padding: 40px 0 20px;
-		background-color: #0c3523;
-		@media (max-width: 425px) {
-				padding: 0;
-				height: 100px;
-			}
-		.footer-wrap {
-			height: clamp(80px, 100px, 140px);
-			display: flex;
-			justify-content: space-between;
-			@media (max-width: 768px) {
-
-			}
-		}
-		&-item {
-			border-right: 1px solid #fff;
-			padding: 0 30px;
-			width: 33%;
-			height: clamp(60px, 1vw, 130px);
-			display: flex;
-			align-items: start;
-			gap: 30px;
-			&:nth-child(3) {
-				border-right:none;
-			}
-			@media (max-width: 768px) {
-				flex-direction: column;
-				align-items: center;
-				justify-content:flex-start;
-				padding: 0;
-				gap: 10px;
-			}
-			@media (max-width: 425px) {
-				margin-top: 20px;
-			}
-			img {
-				width: clamp(40px, 8vw, 80px);
-				height: clamp(40px, 8vw, 80px);
-
-			}
-			.wrapper {
-				h2 {
-					font-family: $fontMain;
-					font-size: clamp(8px, 2vw, 24px);
-					font-weight: 600;
-				}
-				p {
-					text-align: center;
-					margin-top: 10px;
-					font-family: $fontSecondary;
-					font-size: clamp(8px, 1vw, 10px);
-					font-weight: 200;
-					@media (max-width: 768px) {
-						display: none;
-						}
-				}
-			}
-		}
-	}
 
 
 

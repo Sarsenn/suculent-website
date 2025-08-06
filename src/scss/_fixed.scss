@@ -1,8 +1,10 @@
+
+
 .fixed {
 	position: fixed;
 	padding-top: 25px;
-	left: 50%;          /* ставим середину блока на центр окна */
-  	transform: translateX(-50%);
+	left: 50%;
+	transform: translateX(-50%);
 	z-index: 2000;
 	.navbar {
 		padding: 0;

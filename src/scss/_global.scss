@@ -5,6 +5,7 @@
     margin: 0 auto;
     padding: 0 $containerSidePadding + px;
 
+
     @media (max-width: $breakpoint1450) {
         max-width: 1200px;
     }
@@ -20,6 +21,12 @@
     @media (max-width: $breakpoint480) {
         max-width: none;
         padding: 0 10px;
+    }
+}
+
+.big {
+    @media (min-width: 1400px) {
+        max-width: 100%;
     }
 }
 

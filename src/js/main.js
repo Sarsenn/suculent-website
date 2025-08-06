@@ -8,6 +8,7 @@ import { tabsNav } from "./modules/tabsNav";
 
 document.addEventListener("DOMContentLoaded", () => {
 
+animation();
 burgerMenu();
 tabsNav();
 
